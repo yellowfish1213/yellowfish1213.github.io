@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body onload="f()">
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+	  
+	  
+	  
+	 
+	 
+    
+	<nav>
+  <div class="nav-wrapper">
+    <a href="" class="brand-logo"> 文藝</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="https://yellowfish1213.github.io/HTMLHW/literature">文藝</a></li>
+      <li><a href="https://yellowfish1213.github.io/HTMLHW/desserts">小吃</a></li>
+      <li><a href="https://yellowfish1213.github.io/HTMLHW/jogging">散心</a></li>
+	  <li><a href="https://yellowfish1213.github.io/HTMLHW/">首頁</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+
+ <ul class="collection" id="demo"></ul>       
+	<script>
+	 function f(){
+	 var list=[
+	  {"img":"http://www.public.com.tw/epaper/20110831/images/b201.jpg","title":"國立台灣美術館","content":"National Taiwan Museum of Fine Arts","link":"https://www.ntmofa.gov.tw/"},
+	  {"img":"http://p6.p.pixnet.net/albums/userpics/6/1/1929861/4a1269857f16d.jpg","title":"國立自然科學博物館","content":"National Museum of Nature Science","link":"http://www.nmns.edu.tw/"},
+	  {"img":"http://pic.pimg.tw/hom11007/f44ca28ff90cb1ebd06a5f97db452c0e.jpg","title":"台中文化創意產業園區","content":"Taichung Cultural & Creative Industries Park","link":"http://tccip.boch.gov.tw/tccp/main.php"},
+	  {"img":"http://pic.pimg.tw/cucky0124/1430375976-3327529524_n.jpg","title":"台中文學館","content":"Taichung Literature Museum","link":"http://www.tlm.taichung.gov.tw/"},
+	  {"img":"http://blog.roodo.com/flyaway11/ad122e34.jpg","title":"道禾六藝文化館","content":"Natural Way Six Art Cultural Center","link":"http://www.sixarts.org.tw/"},
+	  {"img":"http://pic.pimg.tw/angelwy5451/1410317731-167820456.jpg","title":"范特喜綠光計劃","content":"Fantacy","link":"http://www.fantasystory.com.tw/"}
+
+
+	  ];
+	  var str ="";
+	  for(var i=0;i<list.length;i++)
+	  {
+	  str += '<li class="collection-item avatar">';
+	  str += '<img src="' + list[i].img + '"class="circle">';
+	  str += '<span class="title">' + list[i].title + '</span>';
+	  str += '<p>' + list[i].content + '</p>';
+	  str += '<a href="' + list[i].link + '"class="secondary-content"><i class="material-icons">官網</i></a>';
+	  str += '</li>';
+	  }
+	  document.getElementById("demo").innerHTML =str;
+	 }
+	 
+	 </script>
+	 
+	 
+	 
+	 
+	 <p>相關影音</p><ul>
+	 <head> 
+	<!-- <title>Youtube Data API</title>  -->
+	<meta name="viewport" content="width=device-width, initial-scale=1"> 
+	<script src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+</head> 
+
+<body> 
+	<div id="VideoThumbs"><!-- 這裡會產生YouTube Thumbs列出影片 --></div>
+	
+	<script type="text/javascript">
+
+		var apiKey = "AIzaSyCIlwa-7d7qpKS0Nj5vhI7tb-0minC-qZ8";
+
+		function getVideos(pid, apiKey) {
+			// PlaylistItems: list 語法參見 https://developers.google.com/youtube/v3/docs/playlistItems/list
+			$.get("https://www.googleapis.com/youtube/v3/playlistItems", {
+				part: "snippet,contentDetails",
+				maxResults: 50,
+				playlistId: pid,
+				key: apiKey},
+				function (data) {
+					document.getElementById("VideoThumbs").innerHTML += '<div style="color:red;">====================================================================================================================================================</div>';
+					// 傳回值參見 https://developers.google.com/youtube/v3/docs/playlistItems#resource-representation
+					$.each(data.items, function (i, item) {
+						var str = '<div style="float:left;font-size:small;margin:5px;">';
+						str += '<a href="https://youtu.be/' + item.snippet.resourceId.videoId + '" target="_blank"><img src="' + item.snippet.thumbnails.medium.url + '" /><br />' + item.snippet.title + '</a><br />';
+						if (item.contentDetails.note !== undefined) str += '<a href="' + item.contentDetails.note + '" target="_blank">延伸閱讀</a><br />';
+						str += '</div>';
+						document.getElementById("VideoThumbs").innerHTML += str;
+						
+					})
+				}
+			);
+		}
+		
+		getVideos("PL8Lt9coiQiJCQpjK4mC65pGsLm1_sIIF8", apiKey)	// @台中文藝
+		
+		 
+	</script>	
+</body>
+
+    
+	 
+  <div class="fixed-action-btn horizontal click-to-toggle">
+    <a class="btn-floating btn-large red">
+      <i class="material-icons">選單</i>
+    </a>
+    <ul>
+      <li><a class="btn-floating red"><i class="material-icons">insert_chart</i>嗨</a></li>
+      <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+      <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+      <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+    </ul>
+  </div>
+       
+	      
+	   
+	   
+
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+    </body>
+  </html>
+        

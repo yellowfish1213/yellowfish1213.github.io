@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    </head>
+
+    <body onload="f()">
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+	  
+	  
+	  
+	 
+	 
+    
+	<nav>
+  <div class="nav-wrapper">
+    <a href="" class="brand-logo">台中好玩好去處</a>
+    <ul id="nav-mobile" class="right hide-on-med-and-down">
+      <li><a href="https://yellowfish1213.github.io/HTMLHW/literature">文藝</a></li>
+      <li><a href="https://yellowfish1213.github.io/HTMLHW/desserts">小吃</a></li>
+      <li><a href="https://yellowfish1213.github.io/HTMLHW/jogging">散心</a></li>
+	  <li><a href="https://yellowfish1213.github.io/HTMLHW/">首頁</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+
+<head>
+<h4>
+一中街
+</h4>
+</head>
+
+
+
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Info windows</title>
+    <style>
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #map {
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="map"></div>
+    <script>
+
+// This example displays a marker at the center of Australia.
+// When the user clicks the marker, an info window opens.
+
+function initMap() {
+  var uluru = {lat: 24.150296, lng: 120.686473};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 17,
+    center: uluru
+  });
+
+ 
+  
+  
+  
+  var dodo = {lat: 24.148842, lng: 120.685981};
+  var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h5 id="firstHeading" class="firstHeading">多多茶坊</h5>'+
+      '<div id="bodyContent">'+
+      '<p>很多隱藏版飲料,要不要來個核廢料?秘密?這個還是那個?詳細隱藏菜單請上網搜尋"多多茶坊~~~" </p>' +
+      '</div>'+
+      '</div>';
+
+  var infowindow2 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+  var marker2 = new google.maps.Marker({
+    position: dodo,
+    map: map,
+    title: '多多茶坊 (Ayers Rock)'
+  });
+  marker2.addListener('click', function() {
+    infowindow2.open(map, marker2);
+  });
+  
+  
+  
+    var sawema = {lat: 24.148462, lng: 120.684734};
+  var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h5 id="firstHeading" class="firstHeading">頂好現炒沙威瑪</h5>'+
+      '<div id="bodyContent">'+
+      '<p>加蛋免費阿~有牛排、豬肉牌和雞肉口味~" </p>' +
+      '</div>'+
+      '</div>';
+
+  var infowindow3 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+  var marker3 = new google.maps.Marker({
+    position: sawema,
+    map: map,
+    title: '多多茶坊 (Ayers Rock)'
+  });
+  marker3.addListener('click', function() {
+    infowindow3.open(map, marker3);
+  });
+  
+  
+    var gipai = {lat: 24.148929, lng: 120.684820};
+  var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h5 id="firstHeading" class="firstHeading">一中豪大雞排</h5>'+
+      '<div id="bodyContent">'+
+      '<p>來一中街當然不能錯過超大的雞排囉~" </p>' +
+      '</div>'+
+      '</div>';
+
+  var infowindow4 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+  var marker4 = new google.maps.Marker({
+    position: gipai,
+    map: map,
+    title: '多多茶坊 (Ayers Rock)'
+  });
+  marker4.addListener('click', function() {
+    infowindow4.open(map, marker4);
+  });
+  
+  
+  
+    var banueisow = {lat: 24.148449, lng:120.685050};
+  var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h5 id="firstHeading" class="firstHeading">半月燒</h5>'+
+      '<div id="bodyContent">'+
+      '<p>口感像蛋餅又像薄餅的餡餅,軟軟脆脆的非常好吃,是人氣銅板美食!!! </p>' +
+      '</div>'+
+      '</div>';
+
+  var infowindow5 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+  var marker5 = new google.maps.Marker({
+    position: banueisow,
+    map: map,
+    title: '多多茶坊 (Ayers Rock)'
+  });
+  marker5.addListener('click', function() {
+    infowindow5.open(map, marker5);
+  });
+  
+  
+  
+    var lailai = {lat: 24.148611, lng: 120.684646};
+  var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h5 id="firstHeading" class="firstHeading">來來水果/果汁</h5>'+
+      '<div id="bodyContent">'+
+      '<p>水果新鮮,果汁也能看到老闆現打,每天都有不同的特價品" </p>' +
+      '</div>'+
+      '</div>';
+
+  var infowindow6 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+  var marker6 = new google.maps.Marker({
+    position: lailai,
+    map: map,
+    title: '多多茶坊 (Ayers Rock)'
+  });
+  marker6.addListener('click', function() {
+    infowindow6.open(map, marker6);
+  });
+  
+  
+    var fonzenbin = {lat: 24.148973, lng: 120.686518};
+  var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h5 id="firstHeading" class="firstHeading">一中豐仁冰</h5>'+
+      '<div id="bodyContent">'+
+      '<p>古早味豐仁冰,一碗中含了酸梅冰、牛奶冰淇淋和花豆,一年四季都有人捧場~~~" </p>' +
+      '</div>'+
+      '</div>';
+
+  var infowindow7 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+  var marker7 = new google.maps.Marker({
+    position: fonzenbin,
+    map: map,
+    title: '多多茶坊 (Ayers Rock)'
+  });
+  marker7.addListener('click', function() {
+    infowindow7.open(map, marker7);
+  });
+  
+  
+  
+    var gidangaw = {lat: 24.149804, lng: 120.684216};
+  var contentString = '<div id="content">'+
+      '<div id="siteNotice">'+
+      '</div>'+
+      '<h5 id="firstHeading" class="firstHeading">北海道爆漿蛋奶燒</h5>'+
+      '<div id="bodyContent">'+
+      '<p>餡料滿滿!!!還有新奇的口味:黑糖波霸、雷神朱古力、牽絲起司......等~" </p>' +
+      '</div>'+
+      '</div>';
+
+  var infowindow8 = new google.maps.InfoWindow({
+    content: contentString
+  });
+
+  var marker8 = new google.maps.Marker({
+    position: gidangaw,
+    map: map,
+    title: '多多茶坊 (Ayers Rock)'
+  });
+  marker8.addListener('click', function() {
+    infowindow8.open(map, marker);
+  });
+  
+  
+  
+  
+  
+  
+  
+}
+
+
+
+
+
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&signed_in=true&callback=initMap"></script>
+  </body>
+
+
+
+
+
+
+     
+	 
+  <div class="fixed-action-btn horizontal click-to-toggle">
+    <a class="btn-floating btn-large red">
+      <i class="material-icons">menu</i>
+    </a>
+    <ul>
+      <li><a class="btn-floating red"><i class="material-icons">insert_chart</i></a></li>
+      <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+      <li><a class="btn-floating green"><i class="material-icons">publish</i></a></li>
+      <li><a class="btn-floating blue"><i class="material-icons">attach_file</i></a></li>
+    </ul>
+  </div>
+       
+	      
+	   
+	   
+
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+    </body>
+  </html>
+        
